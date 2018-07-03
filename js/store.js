@@ -75,3 +75,11 @@ function hiddenFrame(willHidden) {
         }
     }
 }
+
+// 當前時間
+let date = new Date();
+let time = date
+  .toLocaleString('zh-CN', { hour12: false })
+  .replace(/\//g, '-')
+  .replace(/\b\d\b/g, '0$&');
+let today = time.split(' ')[0];
